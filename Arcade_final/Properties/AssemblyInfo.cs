@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Arcade_final")]
+[assembly: AssemblyTitle("PaperPlanes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Arcade_final")]
+[assembly: AssemblyProduct("PaperPlanes")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b6175f72-f2ea-41b7-8649-9c665da8760c")]
+[assembly: Guid("eb07400c-3e96-4868-83f8-ac2c3cd3c421")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -123,8 +123,8 @@
     <TypeScriptCompile Include="Scripts\objects\sunmoon.ts" />
     <TypeScriptCompile Include="Scripts\objects\bushes.ts" />
     <TypeScriptCompile Include="Scripts\states\gameover.ts" />
-    <TypeScriptCompile Include="Scripts\states\gameplay.ts" />
-    <TypeScriptCompile Include="Scripts\states\menu.ts" />
+    <TypeScriptCompile Include="Scripts\states\gameplay_level1.ts" />
+    <TypeScriptCompile Include="Scripts\states\menu_level1.ts" />
     <TypeScriptCompile Include="Scripts\constants.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />

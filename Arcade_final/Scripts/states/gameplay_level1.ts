@@ -101,7 +101,7 @@ module states {
                 this.game.addChild(this.wind[windno]);
             }
            
-            // Instantiate Scoreboard
+             // Instantiate Scoreboard
             this.scoreboard = new objects.ScoreBoard(this.game);
 
             // Add Game Container to Stage
@@ -110,42 +110,42 @@ module states {
 
 
         // DISTANCE CHECKING METHOD
-        public distance(p1: createjs.Point, p2: createjs.Point): number {
-            return Math.floor(Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2)));
+        public  distance(p1: createjs.Point, p2: createjs.Point): number {
+        return Math.floor(Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2)));
         } //Distance Method
 
         // CHECK COLLISION METHOD
         public checkCollision(collider: objects.GameObject) {
             if (this.scoreboard.active) {
                 var planePosition: createjs.Point = new createjs.Point(this.plane.x, this.plane.y);
-                var objectPosition: createjs.Point = new createjs.Point(collider.x, collider.y);
-                var theDistance = this.distance(planePosition, objectPosition);
-                if (theDistance < ((this.plane.height * 0.5) + (collider.height * 0.5))) {
-                    if (collider.isColliding != true) {
-                        createjs.Sound.play(collider.sound);
-                        if (collider.name == "wind") {
-                            this.scoreboard.lives--;
-                        }
-
-                        if (collider.name == "island") {
-                            this.scoreboard.score += 10;
-                            this.island.reset();
-                            this.island.update();
-                        }
+            var objectPosition: createjs.Point = new createjs.Point(collider.x, collider.y);
+            var theDistance = this.distance(planePosition, objectPosition);
+            if (theDistance < ((this.plane.height * 0.5) + (collider.height * 0.5))) {
+                if (collider.isColliding != true) {
+                    createjs.Sound.play(collider.sound);
+                    if (collider.name == "wind") {
+                        this.scoreboard.lives--;
                     }
-                    collider.isColliding = true;
-                } else {
-                    collider.isColliding = false;
+                    
+                    if (collider.name == "island") {
+                        this.scoreboard.score += 10;
+                        this.island.reset();
+                        this.island.update();
+                    }
                 }
+                collider.isColliding = true;
+            } else {
+                collider.isColliding = false;
             }
-        } // checkCollision Method
+        }
+    } // checkCollision Method
 
         public update() {
 
             this.ocean.update();
 
             this.sunmoon.update();
-
+            
             this.mountains.update();
 
             this.bushes.update();
@@ -162,7 +162,7 @@ module states {
                 this.checkCollision(this.clouds[cloud]);
             }*/
             this.clouds.update();
-
+            
             this.cloud1.update();
 
             this.cloud2.update();
@@ -196,7 +196,7 @@ module states {
 
             stage.update(); // Refreshes our stage
 
-        } // Update Method
+    } // Update Method
 
     } // GamePlay Class
 

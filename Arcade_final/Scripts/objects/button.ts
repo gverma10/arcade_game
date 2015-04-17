@@ -3,7 +3,7 @@
 module objects {
     // BUTTON CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     export class Button extends objects.GameObject {
-        constructor(x: number, y: number, buttonIDString: string) {
+        constructor(x:number, y:number, buttonIDString: string) {
             super(buttonIDString);
             this.x = x;
             this.y = y;
@@ -24,4 +24,4 @@ module objects {
             this.alpha = 1;
         }
     }
-}  
+} 

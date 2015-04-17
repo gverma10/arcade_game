@@ -1,6 +1,6 @@
 ﻿module objects {
     // ISLAND CLASS
-    export class Island extends objects.GameObject {
+    export class Island extends objects.GameObject{
 
         // CONSTRUCTOR
         constructor() {

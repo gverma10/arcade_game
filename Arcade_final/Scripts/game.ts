@@ -25,9 +25,9 @@
 /// <reference path="objects/button.ts" />
 /// <reference path="objects/label.ts" />
 
-/// <reference path="states/gameplay.ts" />
+/// <reference path="states/gameplay_level1.ts" />
 /// <reference path="states/gameover.ts" />
-/// <reference path="states/menu.ts" />
+/// <reference path="states/menu_level1.ts" />
 
 
 // Global game Variables
