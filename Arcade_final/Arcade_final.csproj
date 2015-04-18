@@ -80,6 +80,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\constants.js.map" />
     <Content Include="Scripts\game.js.map" />
+    <Content Include="documentation\External Game Document - Gurinder Verma - 300811333.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
