@@ -23,3 +23,4 @@
 /// <reference path="constants.js" />
 /// <reference path="game.js" />
 /// <reference path="objects/shootingstar.ts" />
+/// <reference path="objects/missile.ts" />

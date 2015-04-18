@@ -127,6 +127,7 @@
     <TypeScriptCompile Include="Scripts\objects\asteroids.ts" />
     <TypeScriptCompile Include="Scripts\objects\galaxy_milkyway.ts" />
     <TypeScriptCompile Include="Scripts\objects\hydro_cap.ts" />
+    <TypeScriptCompile Include="Scripts\objects\missile.ts" />
     <TypeScriptCompile Include="Scripts\objects\moon.ts" />
     <TypeScriptCompile Include="Scripts\objects\planet1.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud.ts" />

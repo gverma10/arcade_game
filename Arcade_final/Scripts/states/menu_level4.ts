@@ -30,6 +30,7 @@
 /// <reference path="../objects/plane_powered.ts" />
 /// <reference path="../objects/zepher.ts" />
 /// <reference path="../objects/shootingstar.ts" />
+/// <reference path="../objects/missile.ts" />
 
 
 /// <reference path="../objects/scoreboard.ts" />
@@ -64,7 +65,7 @@ module states {
             this.game.addChild(this.mailPilotLabel);
 
 
-            this.mailPilotLabel1 = new objects.Label(250, 140, "You have to save the plane\n\nfrom wind and try prick the bubbles\n\nas more as possible to gain high score..");
+            this.mailPilotLabel1 = new objects.Label(250, 140, "Welcome to final level");
             this.mailPilotLabel1.font = "24px Consolas";
             this.mailPilotLabel1.regX = this.mailPilotLabel.getMeasuredWidth() * 0.5;
             this.mailPilotLabel1.regY = this.mailPilotLabel.getMeasuredLineHeight() * 0.5;

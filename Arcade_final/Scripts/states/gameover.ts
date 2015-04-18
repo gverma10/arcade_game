@@ -30,6 +30,7 @@
 /// <reference path="../objects/plane_powered.ts" />
 /// <reference path="../objects/zepher.ts" />
 /// <reference path="../objects/shootingstar.ts" />
+/// <reference path="../objects/missile.ts" />
 
 /// <reference path="../objects/scoreboard.ts" />
 

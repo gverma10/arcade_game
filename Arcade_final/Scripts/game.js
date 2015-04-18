@@ -37,6 +37,7 @@
 /// <reference path="objects/plane_powered.ts" />
 /// <reference path="objects/zepher.ts" />
 /// <reference path="objects/shootingstar.ts" />
+/// <reference path="objects/missile.ts" />
 /// <reference path="states/gameplay_level1.ts" />
 /// <reference path="states/gameplay_level2.ts" />
 /// <reference path="states/gameplay_level3.ts" />
