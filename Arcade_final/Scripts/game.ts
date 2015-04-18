@@ -223,7 +223,7 @@ function changeState(state: number): void {
             currentStateFunction = gameOver;
             break;
 
-        case constants.GAME_OVER_STATE:
+        case constants.GAME_WIN:
             // instantiate game over screen
             gameWin = new states.Win();
             currentStateFunction = gameWin;

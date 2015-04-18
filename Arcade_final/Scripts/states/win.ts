@@ -95,7 +95,7 @@ module states {
             if (this.play) {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
-                currentState = constants.PLAY_STATE_LEVEL4;
+                currentState = constants.GAME_OVER_STATE;
                 stateChanged = true;
             }
 

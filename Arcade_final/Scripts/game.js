@@ -188,7 +188,7 @@ function changeState(state) {
             gameOver = new states.GameOver();
             currentStateFunction = gameOver;
             break;
-        case constants.GAME_OVER_STATE:
+        case constants.GAME_WIN:
             // instantiate game over screen
             gameWin = new states.Win();
             currentStateFunction = gameWin;
