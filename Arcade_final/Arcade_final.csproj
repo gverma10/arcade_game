@@ -74,7 +74,7 @@
     <Content Include="assets\images\planet_3.png" />
     <Content Include="assets\images\planet_4.png" />
     <Content Include="assets\images\planet_5.png" />
-    <Content Include="assets\images\shooting star.png" />
+    <Content Include="assets\images\shooting_star.png" />
     <Content Include="assets\images\zepher_surface.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
@@ -126,6 +126,8 @@
     <TypeScriptCompile Include="Scripts\objects\galaxy_bg.ts" />
     <TypeScriptCompile Include="Scripts\objects\asteroids.ts" />
     <TypeScriptCompile Include="Scripts\objects\galaxy_milkyway.ts" />
+    <TypeScriptCompile Include="Scripts\objects\hydro_cap.ts" />
+    <TypeScriptCompile Include="Scripts\objects\moon.ts" />
     <TypeScriptCompile Include="Scripts\objects\planet1.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
     <TypeScriptCompile Include="Scripts\objects\planet2.ts" />
@@ -151,6 +153,7 @@
     <TypeScriptCompile Include="Scripts\objects\wind.ts" />
     <TypeScriptCompile Include="Scripts\objects\sunmoon.ts" />
     <TypeScriptCompile Include="Scripts\objects\bushes.ts" />
+    <TypeScriptCompile Include="Scripts\objects\zepher.ts" />
     <TypeScriptCompile Include="Scripts\states\gameover.ts" />
     <TypeScriptCompile Include="Scripts\states\gameplay_level1.ts" />
     <TypeScriptCompile Include="Scripts\states\gameplay_level2.ts" />

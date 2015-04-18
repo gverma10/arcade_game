@@ -1,13 +1,5 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/island.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/plane.ts" />
-/// <reference path="../objects/cloud.ts" />
-/// <reference path="../objects/cloud1.ts" />
-/// <reference path="../objects/cloud2.ts" />
-/// <reference path="../objects/cloud3.ts" />
-/// <reference path="../objects/cloud4.ts" />
 /// <reference path="../objects/wind.ts" />
 /// <reference path="../objects/bushes.ts" />
 /// <reference path="../objects/grass.ts" />
@@ -25,58 +17,33 @@
 /// <reference path="../objects/planet3.ts" />
 /// <reference path="../objects/planet4.ts" />
 /// <reference path="../objects/planet5.ts" />
+/// <reference path="../objects/moon.ts" />
+/// <reference path="../objects/hydro_cap.ts" />
+/// <reference path="../objects/plane_powered.ts" />
+/// <reference path="../objects/zepher.ts" />
+/// <reference path="../objects/shootingstar.ts" />
 var states;
 (function (states) {
     var GamePlay_level3 = (function () {
         function GamePlay_level3() {
-            this.wind = [];
+            this.shooting_star = [];
             // Instantiate Game Container
             this.game = new createjs.Container();
-            //this.cloud1 = new objects.Island();
-            //this.game.addChild(this.cloud1);
             //Ocean object
-            this.ocean = new objects.Ocean();
-            this.game.addChild(this.ocean);
-            //SunMoon object
-            this.sunmoon = new objects.SunMoon();
-            this.game.addChild(this.sunmoon);
+            this.moon = new objects.Moon();
+            this.game.addChild(this.moon);
             //Mountains object
-            this.mountains = new objects.Mountains();
-            this.game.addChild(this.mountains);
-            //Bushes object
-            this.bushes = new objects.Bushes();
-            this.game.addChild(this.bushes);
-            //Bushes object
-            this.grass = new objects.Grass();
-            this.game.addChild(this.grass);
+            this.zepher = new objects.Zepher();
+            this.game.addChild(this.zepher);
             //Bubbles object
-            this.island = new objects.Island();
-            this.game.addChild(this.island);
-            //Cloud object
-            /*for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud] = new objects.Cloud();
-                this.game.addChild(this.clouds[cloud]);
-            }*/
-            this.clouds = new objects.Cloud();
-            this.game.addChild(this.clouds);
-            //Cloud1 object
-            this.cloud1 = new objects.Cloud1();
-            this.game.addChild(this.cloud1);
-            //Cloud2 object
-            this.cloud2 = new objects.Cloud2();
-            this.game.addChild(this.cloud2);
-            //Cloud3 object
-            this.cloud3 = new objects.Cloud3();
-            this.game.addChild(this.cloud3);
-            //Cloud4 object
-            this.cloud4 = new objects.Cloud4();
-            this.game.addChild(this.cloud4);
+            this.hydro_cap = new objects.Hydro_Cap();
+            this.game.addChild(this.hydro_cap);
             //Plane object
-            this.plane = new objects.Plane();
-            this.game.addChild(this.plane);
+            this.plane_pw = new objects.Plane_Powered();
+            this.game.addChild(this.plane_pw);
             for (var windno = 3; windno >= 0; windno--) {
-                this.wind[windno] = new objects.Wind();
-                this.game.addChild(this.wind[windno]);
+                this.shooting_star[windno] = new objects.Shooting_Star();
+                this.game.addChild(this.shooting_star[windno]);
             }
             // Instantiate Scoreboard
             this.scoreboard = new objects.ScoreBoard(this.game);
@@ -90,19 +57,19 @@ var states;
         // CHECK COLLISION METHOD
         GamePlay_level3.prototype.checkCollision = function (collider) {
             if (this.scoreboard.active) {
-                var planePosition = new createjs.Point(this.plane.x, this.plane.y);
+                var planePosition = new createjs.Point(this.plane_pw.x, this.plane_pw.y);
                 var objectPosition = new createjs.Point(collider.x, collider.y);
                 var theDistance = this.distance(planePosition, objectPosition);
-                if (theDistance < ((this.plane.height * 0.5) + (collider.height * 0.5))) {
+                if (theDistance < ((this.plane_pw.height * 0.5) + (collider.height * 0.5))) {
                     if (collider.isColliding != true) {
                         createjs.Sound.play(collider.sound);
-                        if (collider.name == "wind") {
+                        if (collider.name == "shooting_star") {
                             this.scoreboard.lives--;
                         }
-                        if (collider.name == "island") {
+                        if (collider.name == "hydro_cap") {
                             this.scoreboard.score += 10;
-                            this.island.reset();
-                            this.island.update();
+                            this.hydro_cap.reset();
+                            this.hydro_cap.update();
                         }
                     }
                     collider.isColliding = true;
@@ -113,27 +80,14 @@ var states;
             }
         }; // checkCollision Method
         GamePlay_level3.prototype.update = function () {
-            this.ocean.update();
-            this.sunmoon.update();
-            this.mountains.update();
-            this.bushes.update();
-            this.grass.update();
-            this.island.update();
-            this.plane.update();
-            /*for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud].update();
-
-                this.checkCollision(this.clouds[cloud]);
-            }*/
-            this.clouds.update();
-            this.cloud1.update();
-            this.cloud2.update();
-            this.cloud3.update();
-            this.cloud4.update();
-            this.checkCollision(this.island);
+            this.moon.update();
+            this.zepher.update();
+            this.hydro_cap.update();
+            this.plane_pw.update();
+            this.checkCollision(this.hydro_cap);
             for (var windno = 3; windno >= 0; windno--) {
-                this.wind[windno].update();
-                this.checkCollision(this.wind[windno]);
+                this.shooting_star[windno].update();
+                this.checkCollision(this.shooting_star[windno]);
             }
             this.scoreboard.update();
             if (this.scoreboard.lives < 1) {

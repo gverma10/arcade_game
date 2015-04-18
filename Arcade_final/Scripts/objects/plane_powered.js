@@ -11,7 +11,7 @@ var objects;
         __extends(Plane_Powered, _super);
         // CONSTRUCTOR
         function Plane_Powered() {
-            _super.call(this, assetLoader.getResult("plane"));
+            _super.call(this, assetLoader.getResult("plane_power"));
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;
             this.x = 80;

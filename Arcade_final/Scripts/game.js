@@ -32,7 +32,11 @@
 /// <reference path="objects/planet3.ts" />
 /// <reference path="objects/planet4.ts" />
 /// <reference path="objects/planet5.ts" />
-/// <reference path="objects/ocean.ts" />
+/// <reference path="objects/moon.ts" />
+/// <reference path="objects/hydro_cap.ts" />
+/// <reference path="objects/plane_powered.ts" />
+/// <reference path="objects/zepher.ts" />
+/// <reference path="objects/shootingstar.ts" />
 /// <reference path="states/gameplay_level1.ts" />
 /// <reference path="states/gameplay_level2.ts" />
 /// <reference path="states/gameplay_level3.ts" />
@@ -84,7 +88,7 @@ var manifest = [
     { id: "zepher", src: "assets/images/zepher_surface.png" },
     { id: "island", src: "assets/images/blue-bubble-shiny.png" },
     { id: "asteroid", src: "assets/images/asteroid.png" },
-    { id: "hydro_cp", src: "assets/images/hydrogen capsule.png" },
+    { id: "hydro_cap", src: "assets/images/hydrogen capsule.png" },
     { id: "ocean", src: "assets/images/dat-to-night.png" },
     { id: "dust", src: "assets/images/dust.png" },
     { id: "sunmoon", src: "assets/images/sunmoon.png" },
@@ -92,6 +96,7 @@ var manifest = [
     { id: "galaxy_dust", src: "assets/images/galaxy_dust_complete.png" },
     { id: "galaxy_milkyway", src: "assets/images/galaxy_milkyway.png" },
     { id: "darkmoon", src: "assets/images/moon.jpg" },
+    { id: "shooting_star", src: "assets/images/shooting_star.png" },
     { id: "plane", src: "assets/images/paperplane.png" },
     { id: "plane_power", src: "assets/images/paperplane_power.png" },
     { id: "playButton", src: "assets/images/start.png" },

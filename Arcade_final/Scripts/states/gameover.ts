@@ -25,6 +25,11 @@
 /// <reference path="../objects/planet3.ts" />
 /// <reference path="../objects/planet4.ts" />
 /// <reference path="../objects/planet5.ts" />
+/// <reference path="../objects/moon.ts" />
+/// <reference path="../objects/hydro_cap.ts" />
+/// <reference path="../objects/plane_powered.ts" />
+/// <reference path="../objects/zepher.ts" />
+/// <reference path="../objects/shootingstar.ts" />
 
 /// <reference path="../objects/scoreboard.ts" />
 

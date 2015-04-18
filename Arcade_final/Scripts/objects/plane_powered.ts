@@ -6,7 +6,7 @@ module objects {
         public height: number;
         // CONSTRUCTOR
         constructor() {
-            super(assetLoader.getResult("plane"));
+            super(assetLoader.getResult("plane_power"));
 
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;
