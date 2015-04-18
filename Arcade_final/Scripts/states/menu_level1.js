@@ -19,9 +19,9 @@
 var states;
 (function (states) {
     // MENU STATE CLASS
-    var Menu = (function () {
+    var Menu_level1 = (function () {
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        function Menu() {
+        function Menu_level1() {
             this.play = false;
             // Instantiate Game Container
             this.game = new createjs.Container();
@@ -46,22 +46,22 @@ var states;
             // Add Game Container to Stage
             stage.addChild(this.game);
         } // Constructor
-        Menu.prototype.playClicked = function () {
+        Menu_level1.prototype.playClicked = function () {
             this.play = true;
         };
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        Menu.prototype.update = function () {
+        Menu_level1.prototype.update = function () {
             this.ocean.update();
             if (this.play) {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
-                currentState = constants.PLAY_STATE;
+                currentState = constants.PLAY_STATE_LEVEL1;
                 stateChanged = true;
             }
             stage.update(); // Refreshes our stage
         }; // Update Method
-        return Menu;
+        return Menu_level1;
     })();
-    states.Menu = Menu; // Menu Class
+    states.Menu_level1 = Menu_level1; // Menu Class
 })(states || (states = {})); // States Module
 //# sourceMappingURL=menu_level1.js.map

@@ -18,7 +18,7 @@
 
 module states {
 
-    export class GamePlay {
+    export class GamePlay_level1 {
         // Game Objects 
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
@@ -191,6 +191,15 @@ module states {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
                 currentState = constants.GAME_OVER_STATE;
+                stateChanged = true;
+            }
+
+            if (this.scoreboard.score > 30) {
+                this.scoreboard.active = false;
+                
+                this.game.removeAllChildren();
+                stage.removeChild(this.game);
+                currentState = constants.MENU_STATE_LEVEL2;
                 stateChanged = true;
             }
 

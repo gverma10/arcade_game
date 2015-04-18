@@ -17,8 +17,8 @@
 /// <reference path="../objects/label.ts" />
 var states;
 (function (states) {
-    var GamePlay_level1 = (function () {
-        function GamePlay_level1() {
+    var GamePlay_level3 = (function () {
+        function GamePlay_level3() {
             this.wind = [];
             // Instantiate Game Container
             this.game = new createjs.Container();
@@ -74,11 +74,11 @@ var states;
             stage.addChild(this.game);
         } // Constructor
         // DISTANCE CHECKING METHOD
-        GamePlay_level1.prototype.distance = function (p1, p2) {
+        GamePlay_level3.prototype.distance = function (p1, p2) {
             return Math.floor(Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2)));
         }; //Distance Method
         // CHECK COLLISION METHOD
-        GamePlay_level1.prototype.checkCollision = function (collider) {
+        GamePlay_level3.prototype.checkCollision = function (collider) {
             if (this.scoreboard.active) {
                 var planePosition = new createjs.Point(this.plane.x, this.plane.y);
                 var objectPosition = new createjs.Point(collider.x, collider.y);
@@ -102,7 +102,7 @@ var states;
                 }
             }
         }; // checkCollision Method
-        GamePlay_level1.prototype.update = function () {
+        GamePlay_level3.prototype.update = function () {
             this.ocean.update();
             this.sunmoon.update();
             this.mountains.update();
@@ -138,17 +138,10 @@ var states;
                 currentState = constants.GAME_OVER_STATE;
                 stateChanged = true;
             }
-            if (this.scoreboard.score > 30) {
-                this.scoreboard.active = false;
-                this.game.removeAllChildren();
-                stage.removeChild(this.game);
-                currentState = constants.MENU_STATE_LEVEL2;
-                stateChanged = true;
-            }
             stage.update(); // Refreshes our stage
         }; // Update Method
-        return GamePlay_level1;
+        return GamePlay_level3;
     })();
-    states.GamePlay_level1 = GamePlay_level1; // GamePlay Class
+    states.GamePlay_level3 = GamePlay_level3; // GamePlay Class
 })(states || (states = {})); // States Module
-//# sourceMappingURL=gameplay_level1.js.map
+//# sourceMappingURL=gameplay_level3.js.map

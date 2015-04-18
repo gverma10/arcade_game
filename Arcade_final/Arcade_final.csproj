@@ -59,6 +59,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\asteroid.png" />
+    <Content Include="assets\images\dust.png" />
+    <Content Include="assets\images\galaxy_bg_complete.png" />
+    <Content Include="assets\images\galaxy_dust_complete.png" />
+    <Content Include="assets\images\galaxy_milkyway.png" />
+    <Content Include="assets\images\hydrogen capsule.png" />
+    <Content Include="assets\images\meteor-attack.png" />
+    <Content Include="assets\images\missile.png" />
+    <Content Include="assets\images\moon.jpg" />
+    <Content Include="assets\images\paperplane_power.png" />
+    <Content Include="assets\images\planet_1.png" />
+    <Content Include="assets\images\planet_2.png" />
+    <Content Include="assets\images\planet_3.png" />
+    <Content Include="assets\images\planet_4.png" />
+    <Content Include="assets\images\planet_5.png" />
+    <Content Include="assets\images\shooting star.png" />
+    <Content Include="assets\images\zepher_surface.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\constants.js.map" />
@@ -82,7 +99,7 @@
     <Content Include="assets\images\cloud_4.png" />
     <Content Include="assets\images\cloud_5.png" />
     <Content Include="assets\images\dat-to-night.png" />
-    <Content Include="assets\images\day08_paperplane.png" />
+    <Content Include="assets\images\paperplane.png" />
     <Content Include="assets\images\grass.png" />
     <Content Include="assets\images\mountains.png" />
     <Content Include="assets\images\playagain.png" />
@@ -118,12 +135,19 @@
     <TypeScriptCompile Include="Scripts\objects\mountains.ts" />
     <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
     <TypeScriptCompile Include="Scripts\objects\plane.ts" />
+    <TypeScriptCompile Include="Scripts\objects\plane_powered.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
     <TypeScriptCompile Include="Scripts\objects\wind.ts" />
     <TypeScriptCompile Include="Scripts\objects\sunmoon.ts" />
     <TypeScriptCompile Include="Scripts\objects\bushes.ts" />
     <TypeScriptCompile Include="Scripts\states\gameover.ts" />
     <TypeScriptCompile Include="Scripts\states\gameplay_level1.ts" />
+    <TypeScriptCompile Include="Scripts\states\gameplay_level2.ts" />
+    <TypeScriptCompile Include="Scripts\states\gameplay_level3.ts" />
+    <TypeScriptCompile Include="Scripts\states\gameplay_level4.ts" />
+    <TypeScriptCompile Include="Scripts\states\menu_level4.ts" />
+    <TypeScriptCompile Include="Scripts\states\menu_level3.ts" />
+    <TypeScriptCompile Include="Scripts\states\menu_level2.ts" />
     <TypeScriptCompile Include="Scripts\states\menu_level1.ts" />
     <TypeScriptCompile Include="Scripts\constants.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />

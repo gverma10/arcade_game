@@ -20,7 +20,7 @@
 
 module states {
     // MENU STATE CLASS
-    export class Menu_level1 {
+    export class Menu_level2 {
         // Game Objects 
         public game: createjs.Container;
         public ocean: objects.Ocean;
@@ -48,7 +48,7 @@ module states {
             this.game.addChild(this.mailPilotLabel);
 
 
-            this.mailPilotLabel1 = new objects.Label(250, 140, "You have to save the plane\n\nfrom wind and try prick the bubbles\n\nas more as possible to gain high score..");
+            this.mailPilotLabel1 = new objects.Label(250, 140, "welcome to level 2");
             this.mailPilotLabel1.font = "24px Consolas";
             this.mailPilotLabel1.regX = this.mailPilotLabel.getMeasuredWidth() * 0.5;
             this.mailPilotLabel1.regY = this.mailPilotLabel.getMeasuredLineHeight() * 0.5;
@@ -78,7 +78,7 @@ module states {
             if (this.play) {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
-                currentState = constants.PLAY_STATE_LEVEL1;
+                currentState = constants.PLAY_STATE_LEVEL2;
                 stateChanged = true;
             }
 

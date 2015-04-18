@@ -20,7 +20,7 @@
 
 module states {
     // MENU STATE CLASS
-    export class Menu_level1 {
+    export class Menu_level3 {
         // Game Objects 
         public game: createjs.Container;
         public ocean: objects.Ocean;
@@ -78,7 +78,7 @@ module states {
             if (this.play) {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
-                currentState = constants.PLAY_STATE_LEVEL1;
+                currentState = constants.PLAY_STATE_LEVEL3;
                 stateChanged = true;
             }
 
