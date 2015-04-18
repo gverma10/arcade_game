@@ -123,10 +123,18 @@
   <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
+    <TypeScriptCompile Include="Scripts\objects\galaxy_bg.ts" />
+    <TypeScriptCompile Include="Scripts\objects\asteroids.ts" />
+    <TypeScriptCompile Include="Scripts\objects\galaxy_milkyway.ts" />
+    <TypeScriptCompile Include="Scripts\objects\planet1.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud.ts" />
+    <TypeScriptCompile Include="Scripts\objects\planet2.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud1.ts" />
+    <TypeScriptCompile Include="Scripts\objects\planet3.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud2.ts" />
+    <TypeScriptCompile Include="Scripts\objects\planet4.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud3.ts" />
+    <TypeScriptCompile Include="Scripts\objects\planet5.ts" />
     <TypeScriptCompile Include="Scripts\objects\cloud4.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
     <TypeScriptCompile Include="Scripts\objects\grass.ts" />
@@ -137,6 +145,9 @@
     <TypeScriptCompile Include="Scripts\objects\plane.ts" />
     <TypeScriptCompile Include="Scripts\objects\plane_powered.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
+    <TypeScriptCompile Include="Scripts\objects\galaxy_dust.ts" />
+    <TypeScriptCompile Include="Scripts\objects\meteor.ts" />
+    <TypeScriptCompile Include="Scripts\objects\shootingstar.ts" />
     <TypeScriptCompile Include="Scripts\objects\wind.ts" />
     <TypeScriptCompile Include="Scripts\objects\sunmoon.ts" />
     <TypeScriptCompile Include="Scripts\objects\bushes.ts" />
@@ -145,6 +156,7 @@
     <TypeScriptCompile Include="Scripts\states\gameplay_level2.ts" />
     <TypeScriptCompile Include="Scripts\states\gameplay_level3.ts" />
     <TypeScriptCompile Include="Scripts\states\gameplay_level4.ts" />
+    <TypeScriptCompile Include="Scripts\states\win.ts" />
     <TypeScriptCompile Include="Scripts\states\menu_level4.ts" />
     <TypeScriptCompile Include="Scripts\states\menu_level3.ts" />
     <TypeScriptCompile Include="Scripts\states\menu_level2.ts" />

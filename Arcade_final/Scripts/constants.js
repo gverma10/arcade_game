@@ -10,10 +10,11 @@ var constants;
     constants.MENU_STATE_LEVEL4 = 6;
     constants.PLAY_STATE_LEVEL4 = 7;
     constants.GAME_OVER_STATE = 8;
+    constants.GAME_WIN = 9;
     // Game Constants
-    constants.CLOUD_NUM = 9;
+    constants.CLOUD_NUM = 10;
     constants.LABEL_FONT = "40px Consolas";
     constants.LABEL_COLOUR = "#FFFF00";
-    constants.PLANE_LIVES = 10;
+    constants.PLANE_LIVES = 11;
 })(constants || (constants = {}));
 //# sourceMappingURL=constants.js.map

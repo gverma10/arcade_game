@@ -15,6 +15,16 @@
 /// <reference path="../objects/sunmoon.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../objects/label.ts" />
+/// <reference path="../objects/asteroids.ts" />
+/// <reference path="../objects/galaxy_bg.ts" />
+/// <reference path="../objects/galaxy_milkyway.ts" />
+/// <reference path="../objects/galaxy_dust.ts" />
+/// <reference path="../objects/meteor.ts" />
+/// <reference path="../objects/planet1.ts" />
+/// <reference path="../objects/planet2.ts" />
+/// <reference path="../objects/planet3.ts" />
+/// <reference path="../objects/planet4.ts" />
+/// <reference path="../objects/planet5.ts" />
 var states;
 (function (states) {
     var GamePlay_level4 = (function () {
@@ -136,6 +146,13 @@ var states;
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
                 currentState = constants.GAME_OVER_STATE;
+                stateChanged = true;
+            }
+            if (this.scoreboard.score > 30) {
+                this.scoreboard.active = false;
+                this.game.removeAllChildren();
+                stage.removeChild(this.game);
+                currentState = constants.GAME_WIN;
                 stateChanged = true;
             }
             stage.update(); // Refreshes our stage

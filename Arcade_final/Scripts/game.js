@@ -22,6 +22,17 @@
 /// <reference path="objects/sunmoon.ts" />
 /// <reference path="objects/button.ts" />
 /// <reference path="objects/label.ts" />
+/// <reference path="objects/asteroids.ts" />
+/// <reference path="objects/galaxy_bg.ts" />
+/// <reference path="objects/galaxy_milkyway.ts" />
+/// <reference path="objects/galaxy_dust.ts" />
+/// <reference path="objects/meteor.ts" />
+/// <reference path="objects/planet1.ts" />
+/// <reference path="objects/planet2.ts" />
+/// <reference path="objects/planet3.ts" />
+/// <reference path="objects/planet4.ts" />
+/// <reference path="objects/planet5.ts" />
+/// <reference path="objects/ocean.ts" />
 /// <reference path="states/gameplay_level1.ts" />
 /// <reference path="states/gameplay_level2.ts" />
 /// <reference path="states/gameplay_level3.ts" />
@@ -31,6 +42,7 @@
 /// <reference path="states/menu_level2.ts" />
 /// <reference path="states/menu_level3.ts" />
 /// <reference path="states/menu_level4.ts" />
+/// <reference path="states/win.ts" />
 // Global game Variables
 var canvas;
 var stage;
@@ -47,6 +59,7 @@ var gamePlay2;
 var gamePlay3;
 var gamePlay4;
 var gameOver;
+var gameWin;
 var menu1;
 var menu2;
 var menu3;
@@ -80,7 +93,7 @@ var manifest = [
     { id: "galaxy_milkyway", src: "assets/images/galaxy_milkyway.png" },
     { id: "darkmoon", src: "assets/images/moon.jpg" },
     { id: "plane", src: "assets/images/paperplane.png" },
-    { id: "plane", src: "assets/images/paperplane_power.png" },
+    { id: "plane_power", src: "assets/images/paperplane_power.png" },
     { id: "playButton", src: "assets/images/start.png" },
     { id: "tryAgainButton", src: "assets/images/playagain.png" },
     { id: "engine", src: "assets/audio/wind.mp3" },
@@ -118,6 +131,7 @@ function gameLoop() {
         stateChanged = false;
     }
     else {
+        currentStateFunction.update();
     }
     stats.end();
 }
@@ -167,6 +181,11 @@ function changeState(state) {
             // instantiate game over screen
             gameOver = new states.GameOver();
             currentStateFunction = gameOver;
+            break;
+        case constants.GAME_OVER_STATE:
+            // instantiate game over screen
+            gameWin = new states.Win();
+            currentStateFunction = gameWin;
             break;
     }
 }

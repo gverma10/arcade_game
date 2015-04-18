@@ -8,11 +8,12 @@
      export var PLAY_STATE_LEVEL3: number = 5;
      export var MENU_STATE_LEVEL4: number = 6;
      export var PLAY_STATE_LEVEL4: number = 7;
-    export var GAME_OVER_STATE: number = 8;
+     export var GAME_OVER_STATE: number = 8;
+     export var GAME_WIN: number = 9;
 
     // Game Constants
-    export var CLOUD_NUM: number = 9;
+    export var CLOUD_NUM: number = 10;
     export var LABEL_FONT = "40px Consolas";
     export var LABEL_COLOUR = "#FFFF00";
-    export var PLANE_LIVES = 10;
+    export var PLANE_LIVES = 11;
 } 
